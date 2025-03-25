@@ -12,7 +12,7 @@ const Task = () => {
 
   useEffect(()=>{
     const fetch=async()=>{
-        const response=await axios.get(`http://localhost:5173/api/v1/task/${id}/alltasks`,{
+        const response=await axios.get(`https://event-management-mofb.vercel.app/api/v1/task/${id}/alltasks`,{
             withCredentials:true,
             headers:{
                 "Content-Type":"application/json"
@@ -29,7 +29,7 @@ const Task = () => {
 
   const handleDelete = async(index) => {
   try {
-    await axios.delete(`http://localhost:5173/api/v1/task/${id}/delete/${index}`,{
+    await axios.delete(`https://event-management-mofb.vercel.app/api/v1/task/${id}/delete/${index}`,{
         withCredentials:true,
         headers:{
             "Content-Type":"application/json",
@@ -47,7 +47,7 @@ const Task = () => {
 
   const handleStatusChange = async (index, newStatus) => {
     try {
-        await axios.put(`http://localhost:5173/api/v1/task/${id}/status/${index}`,{
+        await axios.put(`https://event-management-mofb.vercel.app/api/v1/task/${id}/status/${index}`,{
             status:newStatus
         },{
             withCredentials:true,

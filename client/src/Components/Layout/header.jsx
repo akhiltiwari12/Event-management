@@ -20,7 +20,7 @@ const Header = () => {
     try {
       if(!isAuthorized)
         navigateTo("/login");
-      const response=await axios.get("http://localhost:5173/api/v1/user/logout",{withCredentials:true,headers:{
+      const response=await axios.get("https://event-management-mofb.vercel.app/api/v1/user/logout",{withCredentials:true,headers:{
         "Content-Type":"application/json"
       }});
       setIsAuthorized(false);

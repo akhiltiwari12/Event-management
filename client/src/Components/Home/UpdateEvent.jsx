@@ -33,7 +33,7 @@ const UpdateEvent= () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response=await axios.put(`http://localhost:5173/api/v1/event/update/${id}`,{
+        const response=await axios.put(`https://event-management-mofb.vercel.app/api/v1/event/update/${id}`,{
         name:event.name,desc:event.description,location:event.location,date:event.date
     },{
         withCredentials:true,

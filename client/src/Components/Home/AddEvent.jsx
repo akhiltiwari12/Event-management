@@ -36,7 +36,7 @@ const AddEvent= () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const response=await axios.post("http://localhost:5173/api/v1/event/create",{
+    const response=await axios.post("https://event-management-mofb.vercel.app/api/v1/event/create",{
         name:event.name,desc:event.description,location:event.location,date:event.date
     },{
         withCredentials:true,

@@ -17,7 +17,7 @@ const AddTask = () => {
     e.preventDefault();
 
     try {
-        const response=await axios.post(`http://localhost:5173/api/v1/task/${id}/create`,{
+        const response=await axios.post(`https://event-management-mofb.vercel.app/api/v1/task/${id}/create`,{
             name,deadline
         },{
             withCredentials:true,

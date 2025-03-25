@@ -30,7 +30,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5173/api/v1/user/login",
+        "https://event-management-mofb.vercel.app/api/v1/user/login",
         {
           email: formData.email,
           password: formData.password,
