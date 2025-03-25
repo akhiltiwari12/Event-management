@@ -1,0 +1,23 @@
+/* Footer Styling */
+.footer {
+    background: #f5f8fa;
+    color: rgb(29, 57, 120);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 12px;
+    }
+  }
+  
