@@ -26,7 +26,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response=await axios.post("https://event-green.vercel.app/api/v1/user/signup",{
+      const response=await axios.post("http://localhost:5173/api/v1/user/signup",{
         name:formData.name,email:formData.email,password:formData.password
     },{withCredentials:true,
        headers:{"Content-Type":"application/json"}

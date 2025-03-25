@@ -19,7 +19,7 @@ const Attendees = () => {
 
     useEffect(()=>{
     const fetch = async ()=>{
-        const response = await axios.get(`https://event-green.vercel.app/api/v1/attendee/${id}/${taskid}/allattendees`,{
+        const response = await axios.get(`http://localhost:5173/api/v1/attendee/${id}/${taskid}/allattendees`,{
             withCredentials:true,
             headers:{
                 "Content-Type":"application/json"
@@ -35,7 +35,7 @@ const Attendees = () => {
   const handleAddAttendee = async (e) => {
     e.preventDefault();
     try {
-       await axios.post(`https://event-green.vercel.app/api/v1/attendee/${id}/${taskid}/create`,
+       await axios.post(`http://localhost:5173/api/v1/attendee/${id}/${taskid}/create`,
         {
           name:newAttendee
         },{
@@ -55,7 +55,7 @@ const Attendees = () => {
 
   const handleRemoveAttendee = async(index) => {
     try {
-      await axios.delete(`https://event-green.vercel.app/api/v1/attendee/${id}/${taskid}/delete/${index}`,{
+      await axios.delete(`http://localhost:5173/api/v1/attendee/${id}/${taskid}/delete/${index}`,{
         withCredentials:true,
         headers:{
           "Content-Type":"application/json"

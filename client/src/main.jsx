@@ -14,7 +14,7 @@ const AppWrapper = () => {
   useEffect(() => {
     const checkSession = async () => {
       try {
-        const response = await axios.get("https://event-green.vercel.app/api/v1/user/me", {
+        const response = await axios.get("http://localhost:5173/api/v1/user/me", {
           withCredentials: true,
           headers:{
             "Content-Type":"application/json"

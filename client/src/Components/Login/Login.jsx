@@ -30,7 +30,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://event-green.vercel.app/api/v1/user/login",
+        "http://localhost:5173/api/v1/user/login",
         {
           email: formData.email,
           password: formData.password,

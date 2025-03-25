@@ -26,7 +26,7 @@ const Home = () => {
     if (!isAuthorized) navigateTo("/login");
 
     const fetch = async () => {
-      const response = await axios.get("https://event-green.vercel.app/api/v1/event/allevents", {
+      const response = await axios.get("http://localhost:5173/api/v1/event/allevents", {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

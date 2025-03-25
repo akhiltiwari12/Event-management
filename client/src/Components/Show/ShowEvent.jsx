@@ -22,7 +22,7 @@ const ShowEvent = () => {
 
     useEffect(() => {
         const fetchEvent = async () => {
-            const response = await axios.get(`https://event-green.vercel.app/api/v1/event/show/${id}`, {
+            const response = await axios.get(`http://localhost:5173/api/v1/event/show/${id}`, {
                 withCredentials: true,
                 headers: {
                     "Content-Type": "application/json"
@@ -40,7 +40,7 @@ const ShowEvent = () => {
 
     useEffect(() => {
         const fetchAttendees = async () => {
-            const response = await axios.get(`https://event-green.vercel.app/api/v1/attendee/${id}/allattendees`, {
+            const response = await axios.get(`http://localhost:5173/api/v1/attendee/${id}/allattendees`, {
                 withCredentials: true,
                 headers: {
                     "Content-Type": "application/json"
@@ -53,7 +53,7 @@ const ShowEvent = () => {
 
     const deleteEvent = async () => {
         try {
-            await axios.delete(`https://event-green.vercel.app/api/v1/event/delete/${id}`, {
+            await axios.delete(`http://localhost:5173/api/v1/event/delete/${id}`, {
                 withCredentials: true,
                 headers: {
                     "Content-Type": "application/json"
